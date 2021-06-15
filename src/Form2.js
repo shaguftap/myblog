@@ -65,11 +65,12 @@ function Form2() {
   }
   const edidata = (id) => {
     console.log(id);
-    let userdata = arr.find((item) => {
-      if (item.userid === id) {
-        return item
-      }
-    })
+   let userdata= arr.find(item => item.userid ===id);
+    // let userdata = arr.find((item) => {
+    //   if (item.userid === id) {
+    //     return item
+    //   }
+    // })
     setId(userdata.userid)
     setName(userdata.name);
     setAdd(userdata.address);
