@@ -1,5 +1,6 @@
 import "./App.css";
 import { useState } from "react";
+import Formlist from "./components/Formlist";
 import { v4 as uuidv4 } from 'uuid';
 
 let temarr = []
@@ -118,7 +119,7 @@ function Form2() {
 
 
       </form>{" "}
-      {arr.map((item) => {
+      {/* {arr.map((item) => {
 
         return (
           <div className="form2style">
@@ -127,12 +128,13 @@ function Form2() {
             <li>{item.phone}</li>
             <button onClick={() => edidata(item.userid)}>Edit</button>
             <button onClick={() => deletedata(item.userid)}>Delete</button>
-
-
           </div>
         )
       })}
+       */}
+       <Formlist  arr={arr}edidata={edidata} deletedata={deletedata}/>
     </div>
   );
 }
+
 export default Form2;
